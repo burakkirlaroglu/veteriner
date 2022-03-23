@@ -18,7 +18,7 @@
       <!--/*@thymesVar id="pet" type="com.burak.veteriner.entity.Pet"*/-->
       <form action="#" th:action="@{/pets/find?param1=pet.name}" th:object="${pet}">
         <label for="pet_input">Search:</label>
-        <input name="search" id="pet_input"> </input>
+        <input name="name" id="pet_input"> </input>
         <div th:if="${not #lists.isEmpty(pet)}">
           <h2>Search Results</h2>
           <table>

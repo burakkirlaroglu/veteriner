@@ -28,12 +28,12 @@ public class OwnerController {
     }
 
     @GetMapping(value = "list")
-    public String personList(Model model) {
+    public String ownerList(Model model) {
         return ownerService.ownerList(model);
     }
 
     @PostMapping("add")
-    public String addPerson(Owner owner, BindingResult result, Model model){
+    public String addOwner(Owner owner, BindingResult result, Model model){
         return ownerService.addOwner(owner, result, model);
     }
 

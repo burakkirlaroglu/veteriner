@@ -29,7 +29,7 @@ public class PetController {
     }
 
     @GetMapping(value = "find")
-    public String getPet(@Param("name") String name, Model model) {
+    public String getPet(@RequestParam("name") String name, Model model) {
         return petService.getPet(name, model);
     }
 
