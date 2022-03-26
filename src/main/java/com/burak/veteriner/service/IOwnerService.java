@@ -14,6 +14,8 @@ public interface IOwnerService {
 
     String getOwner(String name, Model model);
 
+    String getPetFromOwner(String name, Model model);
+
     String showOwnerForm(Owner owner);
 
     String ownerList(Model model);

@@ -7,8 +7,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 
-import java.util.ArrayList;
-import java.util.List;
 
 @Component
 public class PetService implements IPetService {

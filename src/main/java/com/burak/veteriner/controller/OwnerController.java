@@ -6,10 +6,7 @@ import com.burak.veteriner.service.OwnerService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RequestMapping("/owner/")
@@ -30,6 +27,11 @@ public class OwnerController {
     @GetMapping(value = "list")
     public String ownerList(Model model) {
         return ownerService.ownerList(model);
+    }
+
+    @GetMapping(value = "find")
+    public String getPetFromOwner(@RequestParam("name") String name, Model model) {
+        return ownerService.getPetFromOwner(name, model);
     }
 
     @PostMapping("add")

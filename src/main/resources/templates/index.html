@@ -16,7 +16,7 @@
   <div class="card">
     <div class="card-body">
       <!--/*@thymesVar id="pet" type="com.burak.veteriner.entity.Pet"*/-->
-      <form action="#" th:action="@{/pets/find?param1=pet.name}" th:object="${pet}">
+      <form action="#" th:action="@{/owner/find?param1=pet.name}" th:object="${pet}">
         <label for="pet_input">Search:</label>
         <input name="name" id="pet_input"> </input>
         <div th:if="${not #lists.isEmpty(pet)}">

@@ -105,17 +105,4 @@ public class Owner {
     public void setPets(List<Pet> pets) {
         this.pets = pets;
     }
-
-    @Override
-    public String toString() {
-        return "Owner{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", phoneNumber='" + phoneNumber + '\'' +
-                ", email='" + email + '\'' +
-                ", address=" + address +
-                ", bestFriends=" + pets +
-                '}';
-    }
 }

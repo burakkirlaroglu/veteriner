@@ -106,16 +106,4 @@ public class Pet {
         this.owner = owner;
     }
 
-    @Override
-    public String toString() {
-        return "Pet{" +
-                "id=" + id +
-                ", type='" + type + '\'' +
-                ", genus='" + genus + '\'' +
-                ", name='" + name + '\'' +
-                ", age=" + age +
-                ", description='" + description + '\'' +
-                ", person=" + owner +
-                '}';
-    }
 }

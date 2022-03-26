@@ -1,11 +1,14 @@
 package com.burak.veteriner.service;
 
 import com.burak.veteriner.entity.Owner;
+import com.burak.veteriner.entity.Pet;
 import com.burak.veteriner.repository.OwnerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+
+import java.util.List;
 
 @Component
 public class OwnerService implements IOwnerService {
@@ -55,6 +58,17 @@ public class OwnerService implements IOwnerService {
     @Override
     public String getOwner(String name, Model model) {
         return null;
+    }
+
+    @Override
+    public String getPetFromOwner(String name, Model model) {
+        Owner owner = this.ownerRepository.findByName(name);
+        List<Pet> pets = owner.getPets();
+        if (model != null){
+            model.addAttribute("pet", pets);
+            return "index";
+        }
+        return "index";
     }
 
     @Override
